@@ -3,8 +3,7 @@
 
 # https://edabit.com/challenge/SHdu4GwBQehhDm4xT
 
-from _assert import assert_results
-
+import _assert 
 
 def freed_prisoners(prison: list[bool]) -> int:
     if len(prison) > 0 and prison[0] == 0: 
@@ -20,10 +19,10 @@ def freed_prisoners(prison: list[bool]) -> int:
     
     
 if __name__=="__main__":
-    assert_results(freed_prisoners([1, 1, 0, 0, 0, 1, 0]), 4)
-    assert_results(freed_prisoners([1, 0, 0, 0, 0, 0, 0]), 2) 
-    assert_results(freed_prisoners([1, 1, 1, 0, 0, 0]), 2) 
-    assert_results(freed_prisoners([1, 0, 1, 0, 1, 0]), 6) 
-    assert_results(freed_prisoners([1, 1, 1]), 1)
-    assert_results(freed_prisoners([0, 0, 0]), 0)
-    assert_results(freed_prisoners([0, 1, 1, 1]), 0)
+    _assert.assert_results(freed_prisoners([1, 1, 0, 0, 0, 1, 0]), 4)
+    _assert.assert_results(freed_prisoners([1, 0, 0, 0, 0, 0, 0]), 2) 
+    _assert.assert_results(freed_prisoners([1, 1, 1, 0, 0, 0]), 2) 
+    _assert.assert_results(freed_prisoners([1, 0, 1, 0, 1, 0]), 6) 
+    _assert.assert_results(freed_prisoners([1, 1, 1]), 1)
+    _assert.assert_results(freed_prisoners([0, 0, 0]), 0)
+    _assert.assert_results(freed_prisoners([0, 1, 1, 1]), 0)
