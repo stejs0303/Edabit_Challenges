@@ -3,7 +3,7 @@
 
 # https://edabit.com/challenge/e5XZ82bAk2rBo9EfS
 
-import _assert
+import testit
 
 def bed_time(*times: tuple[list[str]]) -> list[str]:
     res = []
@@ -20,6 +20,6 @@ def bed_time(*times: tuple[list[str]]) -> list[str]:
 
 
 if __name__=="__main__":
-    _assert.assert_results(bed_time(['07:50', '07:50']), ['00:00'])
-    _assert.assert_results(bed_time(['06:15', '10:00'], ['08:00', '10:00'], ['09:30', '10:00']), ['20:15', '22:00', '23:30'])
-    _assert.assert_results(bed_time(['05:45', '04:00'], ['07:10', '04:30']), ['01:45', '02:40'])
+    testit.assert_results(bed_time(['07:50', '07:50']), ['00:00'])
+    testit.assert_results(bed_time(['06:15', '10:00'], ['08:00', '10:00'], ['09:30', '10:00']), ['20:15', '22:00', '23:30'])
+    testit.assert_results(bed_time(['05:45', '04:00'], ['07:10', '04:30']), ['01:45', '02:40'])

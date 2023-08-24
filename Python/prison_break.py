@@ -3,7 +3,7 @@
 
 # https://edabit.com/challenge/SHdu4GwBQehhDm4xT
 
-import _assert 
+import testit 
 
 def freed_prisoners(prison: list[bool]) -> int:
     if len(prison) > 0 and prison[0] == 0: 
@@ -19,10 +19,10 @@ def freed_prisoners(prison: list[bool]) -> int:
     
     
 if __name__=="__main__":
-    _assert.assert_results(freed_prisoners([1, 1, 0, 0, 0, 1, 0]), 4)
-    _assert.assert_results(freed_prisoners([1, 0, 0, 0, 0, 0, 0]), 2) 
-    _assert.assert_results(freed_prisoners([1, 1, 1, 0, 0, 0]), 2) 
-    _assert.assert_results(freed_prisoners([1, 0, 1, 0, 1, 0]), 6) 
-    _assert.assert_results(freed_prisoners([1, 1, 1]), 1)
-    _assert.assert_results(freed_prisoners([0, 0, 0]), 0)
-    _assert.assert_results(freed_prisoners([0, 1, 1, 1]), 0)
+    testit.assert_results(freed_prisoners([1, 1, 0, 0, 0, 1, 0]), 4)
+    testit.assert_results(freed_prisoners([1, 0, 0, 0, 0, 0, 0]), 2) 
+    testit.assert_results(freed_prisoners([1, 1, 1, 0, 0, 0]), 2) 
+    testit.assert_results(freed_prisoners([1, 0, 1, 0, 1, 0]), 6) 
+    testit.assert_results(freed_prisoners([1, 1, 1]), 1)
+    testit.assert_results(freed_prisoners([0, 0, 0]), 0)
+    testit.assert_results(freed_prisoners([0, 1, 1, 1]), 0)

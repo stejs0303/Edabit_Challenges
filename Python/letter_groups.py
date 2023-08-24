@@ -4,7 +4,7 @@
 
 # https://edabit.com/challenge/TcKZnbdgx7q6LLoFR
 
-import _assert
+import testit
 
 
 def collect(word: str, length: int) -> list[str]:
@@ -35,4 +35,4 @@ if __name__=="__main__":
       ["ensibilit", "incompreh"], ["astr", "ophy", "sici"], ["honorificabi", "litudinitati"],
       ["unimagin"], [], ["tsktsk"], ["uncopyright"]
     ]
-    for i, x in enumerate(str_vector): _assert.assert_results(collect(x, num_vector[i]), res_vector[i])
+    for i, x in enumerate(str_vector): testit.assert_results(collect(x, num_vector[i]), res_vector[i])

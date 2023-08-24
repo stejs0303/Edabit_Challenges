@@ -3,7 +3,7 @@
 
 # https://edabit.com/challenge/MGALfBAXhXqqdFyqo
 
-import _assert
+import testit
 
 
 def atbash(text: str) -> str:
@@ -18,10 +18,10 @@ def atbash(text: str) -> str:
 
 
 if __name__=="__main__":
-    _assert.assert_results(atbash("Hello world!"), "Svool dliow!")
-    _assert.assert_results(atbash("abcdefghijklmnopqrstuvwxyz"), "zyxwvutsrqponmlkjihgfedcba")
-    _assert.assert_results(atbash("ABCDEFGHIJKLMNOPQRSTUVWXYZ"), "ZYXWVUTSRQPONMLKJIHGFEDCBA")
-    _assert.assert_results(atbash("The word 'atbash' derives from the the first and last 2 letters of the Hebrew alphabet."), 
+    testit.assert_results(atbash("Hello world!"), "Svool dliow!")
+    testit.assert_results(atbash("abcdefghijklmnopqrstuvwxyz"), "zyxwvutsrqponmlkjihgfedcba")
+    testit.assert_results(atbash("ABCDEFGHIJKLMNOPQRSTUVWXYZ"), "ZYXWVUTSRQPONMLKJIHGFEDCBA")
+    testit.assert_results(atbash("The word 'atbash' derives from the the first and last 2 letters of the Hebrew alphabet."), 
                    "Gsv dliw 'zgyzhs' wvirevh uiln gsv gsv urihg zmw ozhg 2 ovggvih lu gsv Svyivd zokszyvg.")
-    _assert.assert_results(atbash("Vmxibkgrlm zmw wvxibkgrlm ziv rwvmgrxzo uli gsv Zgyzhs xrksvi."),
+    testit.assert_results(atbash("Vmxibkgrlm zmw wvxibkgrlm ziv rwvmgrxzo uli gsv Zgyzhs xrksvi."),
                    "Encryption and decryption are identical for the Atbash cipher.")

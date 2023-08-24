@@ -5,7 +5,7 @@
 # https://edabit.com/challenge/QN4RMpAnktNvMCWwg
 
 import numpy as np
-import _assert
+import testit
 
 
 def id_mtrx(size: int) -> str|list|list[list[int]]:
@@ -18,10 +18,10 @@ def id_mtrx(size: int) -> str|list|list[list[int]]:
 
     
 if __name__=="__main__":
-    _assert.assert_results(id_mtrx(1), [[1]])
-    _assert.assert_results(id_mtrx(2), [[1, 0], [0, 1]])
-    _assert.assert_results(id_mtrx(3), [[1, 0, 0], [0, 1, 0], [0, 0, 1]])
-    _assert.assert_results(id_mtrx(4), [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
-    _assert.assert_results(id_mtrx(-6), [[0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 0], [0, 0, 0, 1, 0, 0], 
+    testit.assert_results(id_mtrx(1), [[1]])
+    testit.assert_results(id_mtrx(2), [[1, 0], [0, 1]])
+    testit.assert_results(id_mtrx(3), [[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+    testit.assert_results(id_mtrx(4), [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
+    testit.assert_results(id_mtrx(-6), [[0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 0], [0, 0, 0, 1, 0, 0], 
                                          [0, 0, 1, 0, 0, 0], [0, 1, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0]])
-    _assert.assert_results(id_mtrx("edabit"), "ERROR")
+    testit.assert_results(id_mtrx("edabit"), "ERROR")

@@ -2,7 +2,7 @@
 
 # https://edabit.com/challenge/Fpymv2HieqEd7ptAq
 
-import _assert
+import testit
 
 
 def split(seq: str) -> list[str]:
@@ -18,16 +18,16 @@ def split(seq: str) -> list[str]:
 
 
 if __name__=="__main__":
-    _assert.assert_results(split("()()()"), ["()", "()", "()"])
-    _assert.assert_results(split(""), [])
-    _assert.assert_results(split("()()(())"), ["()", "()", "(())"])
-    _assert.assert_results(split("(())(())"), ["(())", "(())"])
-    _assert.assert_results(split("((()))"), ["((()))"])
-    _assert.assert_results(split("()(((((((((())))))))))"), ["()", "(((((((((())))))))))"])
-    _assert.assert_results(split("((())()(()))(()(())())(()())"), ["((())()(()))", "(()(())())", "(()())"])
-    _assert.assert_results(split("((()))(())()()(()())"), ["((()))", "(())", "()", "()", "(()())"])
-    _assert.assert_results(split("((())())(()(()()))"), ["((())())", "(()(()()))"])
-    _assert.assert_results(split("(()(()()))()(((()))()(()))(()((()))(())())"), 
+    testit.assert_results(split("()()()"), ["()", "()", "()"])
+    testit.assert_results(split(""), [])
+    testit.assert_results(split("()()(())"), ["()", "()", "(())"])
+    testit.assert_results(split("(())(())"), ["(())", "(())"])
+    testit.assert_results(split("((()))"), ["((()))"])
+    testit.assert_results(split("()(((((((((())))))))))"), ["()", "(((((((((())))))))))"])
+    testit.assert_results(split("((())()(()))(()(())())(()())"), ["((())()(()))", "(()(())())", "(()())"])
+    testit.assert_results(split("((()))(())()()(()())"), ["((()))", "(())", "()", "()", "(()())"])
+    testit.assert_results(split("((())())(()(()()))"), ["((())())", "(()(()()))"])
+    testit.assert_results(split("(()(()()))()(((()))()(()))(()((()))(())())"), 
                    ["(()(()()))", "()", "(((()))()(()))", "(()((()))(())())"])
     
-    _assert.time_it(split, "(()(()()))()(((()))()(()))(()((()))(())())")
+    testit.time_it(split, "(()(()()))()(((()))()(()))(()((()))(())())")
