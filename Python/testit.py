@@ -1,5 +1,7 @@
 from typing import Any
 import timeit as _timeit
+import sys
+
 
 def assert_results(function_result: Any, expected_value: Any) -> bool:
     match function_result:
@@ -12,5 +14,5 @@ def assert_results(function_result: Any, expected_value: Any) -> bool:
             print(f"{type(function_result)} not implemented")
     
             
-def time_it(func, params) -> None:
-    print(f"{func.__name__} = {_timeit.timeit(lambda: func(params)):.2f} us")
+def time_it(func, *params: Any) -> None:
+    print(f"{func.__name__} = {_timeit.timeit(lambda: func(*params)):.2f} us")
